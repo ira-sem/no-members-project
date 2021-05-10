@@ -1,3 +1,4 @@
 files:
   - source: /*.json
     translation: /%locale%/%original_file_name%
+    "export_only_approved": true
