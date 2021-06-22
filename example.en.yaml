@@ -1,20 +1,19 @@
 ---
-# An employee record
-name: Martin D'vloper
-job: Developer
+#An employee record
+name: Martin D'vloper edited source
+job: Developer  edited
 skill: Elite
-employed: True
+employed: true
 foods:
-    - Apple
-    - Orange
-    - Strawberry     # context
-    - Mango
+  - Apple
+  - Orange
+  - Strawberry
+  - Mango
 languages:
-    perl: Elite
-    python: Elite
-    pascal: Lame
+  perl: Elite
+  python: Elite
+  pascal: Lame
 education: |
-    4 GCSEs
-    3 A-Levels
-    BSc in the Internet of Things
-...
+  4 GCSEs
+  3 A-Levels
+  BSc in the Internet of Things
