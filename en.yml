@@ -2,12 +2,12 @@
 en-US-REV:
   booking:
     payment:
-      description: Conference room booking
+      description: Conference room booking edited
       failure:
         subject: Booking payment failure - %{company_name}
   bookings:
     reminders:
-      booking_cancelled: Booking cancelled
+      booking_cancelled: Booking cancelled edited
       booking_will_not_be_cancelled: Got it! Your booking will not be cancelled
       btn_cancel_booking: Cancel booking
       btn_confirm_cancellation: Confirm cancellation
