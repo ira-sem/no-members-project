@@ -3,7 +3,1127 @@ en-US-REV:
   booking:
     payment:
       description: Conference room booking edited
+      failure:
+        subject: Booking payment failure - %{company_name}
   bookings:
     reminders:
       booking_cancelled: Booking cancelled edited
-      btn_cancel_booking: Cancel booking edited
+      booking_will_not_be_cancelled: Got it! Your booking will not be cancelled
+      btn_cancel_booking: Cancel booking
+      btn_confirm_cancellation: Confirm cancellation
+      btn_nevermind: Keep booking
+      cancel_this_booking: Cancel this booking?
+      email:
+        subject: Booking reminder
+      friendly_reminder: This is a friendly reminder about your upcoming booking
+      hi: Hi %{user_full_name},
+      msg_booking_already_cancelled: This booking has already been cancelled
+      msg_meeting_already_over: This meeting is already over
+      not_found: No such booking was found
+      not_gonna_make_it: Not going to make it?
+      no_longer_visible: It will no longer be visible to you or other attendees
+      powered_by_spaceos: Powered by %{spaceos}
+      problem_with_cancellation: There has been a problem with the cancellation
+      remember_to_cancel: Remember to cancel, so others could use the room
+      see_you_in_the_room: See you in the conference room!
+      token_expired: The access token expired
+      token_invalid: The access token is invalid
+      token_revoked: The access token has been revoked
+  common:
+    meeting: Meeting
+    not_found: '%{record} not found'
+  errors:
+    book_anything:
+      start_at_in_past: Booking cannot start in the past.
+      end_at_after_start_at: Booking end cannot be before booking start.
+      allowed_to_start_before: Booking start date has to be before %{allowed_start}
+      min_duration: 'Booking is too short. Minimum duration: %{min_duration}'
+      max_duration: 'Booking is too long. Maximum duration: %{max_duration}'
+      space_not_bookable: Not enough permissions. Space cannot be booked by this user
+      mode_not_endabled: '%{mode} booking mode is not enabled'
+      cancellation_periods_order: Cancellation periods are in wrong order.
+      cancellation_rates_order: Cancellation rates are in wrong order.
+      space_not_opened: Space is closed in given period.
+      participants_count: Add more desks to invite more people.
+      not_enough_desks: 'Desks available in the space for given period: %{desks_left}'
+      selected_desks_not_available: Some of selected desks are not available.
+      too_many_selected_desks: Seletcted more desks than given desk count.
+      already_started: Booking has already started, cannot be modified.
+      product_has_no_desks: '%{product_type} does not have desks, cannot be booked.'
+      no_flex: This is not a flex desks space.
+      no_fixed: This is not a fixedlex desks space.
+    booking:
+      min_rental_period: This room can be booked for a minimum of %{minimum_rental_period} minutes. Please adjust the time, or choose another meeting room.
+      max_rental_period: This room can be booked for up to %{maximum_rental_period} minutes. Please adjust the time, or choose another meeting room.
+    contract:
+      missing: The company has no contract
+    confirmations:
+      invalid_format: has invalid format
+    event:
+      dates_outside_contract: 'Your booking has to fall within your contract dates:  %{contract_start_date} - %{contract_end_date}'
+    faq_topic_translation:
+      title_should_be_uniq: '%{translation_locale}: was already used'
+    guest:
+      max_invitation_days: 'Maximum invitation length in days: %{days}'
+      dates_outside_contract: Invitation dates have to fall within your company's contract
+    invoice:
+      payment_failure: We are sorry, your payment authorization failed. Please get in touch with your credit card provider if this problem persists.
+      pdf_export:
+        files_number_error: This number should be between 1 and 100
+    post_event:
+      members_are_already_invited: 'Members that are already invited: %{ids}'
+      timeslot_cancellation_date_in_the_past: "The cancellation deadline can't be\\ \\ in the past"
+      member_exceeds_guests_invitations_limit: "You are exceeding the invitation limit\\ \\ per member"
+      available_seats_count_exceded: There are not enough seats available
+      user_already_in_waitlist: This user is already on the waitlist
+      waitlist_is_disabled: The waitlist is disabled for this event
+      event_has_free_seats: The waitlist can't be used - there are still seats available
+      user_already_in_attendees_list: This user is already on the list of attendees
+      overlapping_timeslots: Timeslots are overlapping - make sure there is no conflict
+      publishing_scheduled_for_too_late: Your event should be published at least 24 hours before the start
+      publishing_scheduled_for_future_time: Publishing of the event should be set in the future
+    proxyclick: 'Error on Proxyclick: %{message}'
+    member_invitations:
+      company_exceeds_seats: 'Your company has %{available_count}/%{total_count}  spots available.'
+      email_exists: 'this email already exists'
+      email_outside_company_domain: "Your email doesn't match the %{company_name}\\ \\ domain. Please contact your admin if you think this is an error."
+      email_not_present: Email field should be present in Microsoft account
+      company_not_present: Unknown company. Possibly wrong Microsoft Tenant ID in company settings.
+      sso_disabled: Microsoft SSO disabled
+    messages:
+      after: has to be after %{restriction}
+      already_confirmed: was already confirmed, please try signing in
+      before: has to be before %{restriction}
+      blank: can't be blank
+      confirmation_period_expired: has to be confirmed within %{period}, please request a new one
+      empty: can't be empty
+      expired: has expired, please request a new one
+      invalid: is invalid
+      invalid_date: is not a valid date
+      invalid_datetime: is not a valid datetime
+      invalid_time: is not a valid time
+      is_at: has to be at %{restriction}
+      not_cancellable: cannot be cancelled
+      not_found: not found
+      not_in_unit: has to be equal to one or more booking units
+      not_locked: was not locked
+      not_saved:
+        one: '1 error stopped this %{resource} from being saved:'
+        other: '%{count} errors stopped this %{resource} from being saved:'
+      on_or_after: has to be on or after %{restriction}
+      on_or_before: has to be on or before %{restriction}
+    support_ticket:
+      invalid_transition: 'Invalid transition from %{old_status} to %{new_status}'
+      requester:
+        non_allowed_requester_changes_exist: 'No changes are available to the requester'
+        invalid_transition: 'Requester can''t change status from %{old_status} to %{new_status}'
+    support_ticket_category:
+      name_uniqueness: '%{translation_locale}: was already used'
+      not_all_tickets_are_closed: Category could not be deleted - it contains tickets that were not yet closed
+      invalid_creation_rights: Category creation rights are invalid
+  gcm_notification:
+    booking_events:
+      new_booking_event:
+        admin:
+          body: User %{creator_name} has booked %{space_name} from %{event_starts_at} to %{event_ends_at}
+          title: New conference room booking
+        creator:
+          body: Meeting room %{space_name} booked from %{event_starts_at} until %{event_ends_at}
+          title: Meeting Room successfully booked
+        owner:
+          body: You have booked %{space_name} from %{event_starts_at} to %{event_ends_at}
+          title: Conference room has been booked successfully
+      upcoming_event_reminder:
+        body: We kindly remind you of your reservation. To confirm or cancel the booking, please click link
+        title: Your conference room will be available soon
+    guests:
+      arrived:
+        title: Your guest is here!
+        body: "%{guest_full_name} just checked-in at the desk."
+    points_configurations:
+      admin_notification:
+        title: Updates required to your booking currency settings
+        content: "Some additional updates are required to your booking points configurations.\\ \\ Please proceed to Admin->Inventory->Booking Points and<br/><ul>"
+        currencies_instruction: "<li>add the points-to-currency conversion for the\\ \\ following currencies:<br/>%{currencies}</li>"
+        locales_instruction: "<li>provide the singular and\\ \\ plural names you would like to assign to booking points for the following\\ \\ languages:<br/>%{locales} etc...</li>"
+        note: "<b>Note:</b> If no conversion is provided, the default setting of 1\\ \\ unit of the primary currency = 1 booking point will be applied."
+        body: '%{body}'
+    lunch_order:
+      new:
+        body: Thank you for your order
+        title: Your order has been placed
+      ready:
+        body: Your order is ready and awaiting pickup
+        title: Ready for pickup
+      rejected:
+        body: Please contact the restaurant
+        title: Your order has been cancelled
+    shop_order:
+      in_preparation:
+        body: You will get another message when your order is ready
+        title: Your order is being prepared
+      new:
+        body: User placed a new order
+        title: New order placed
+      new_order:
+        body: Thank you for your order
+        title: Your order has been placed
+      picked_up:
+        body: Thank you for collecting your order
+        title: Your order has been picked up
+      ready:
+        body: Your order is ready and awaiting pickup
+        title: Ready for pickup
+      rejected:
+        body: Please contact the %{shop_category}
+        title: Your order has been cancelled
+    support_tickets:
+      commented:
+        body: You got a new reply on your support ticket. Tap or click to see details.
+        title: You got a new reply on your support ticket
+      created:
+        body: A new support ticket has been created.
+        check: Check the ticket
+        from: from <b>%{company_name}:</b>
+        title: New support ticket
+      reopened:
+        body: Your support ticket has been reopened. Click or tap for details
+        title: Your support ticket has been reopened
+      resolved:
+        body: Your support ticket has been resolved. Tap or click for details.
+        title: Your support ticket has been resolved.
+      updated:
+        body: Your support ticket has been updated. Tap or click to see details.
+        title: Your support ticket has been updated.
+      pending:
+        body: Your support ticket status is pending. Tap or click to see details.
+        title: Your support ticket status is pending.
+      hold:
+        body: Your support ticket status is on-hold. Tap or click to see details.
+        title: Your support ticket status is on-hold.
+      closed:
+        body: Your support ticket is closed. Tap or click to see details.
+        title: Your support ticket is closed.
+    support_ticket_message:
+      new:
+        title: 'You have a new message for ticket #%{ticket_id}'
+        body: 'New message'
+      closed:
+        title: 'Ticket #%{ticket_id} is now closed'
+        body: 'Resolution speed: %{resolution_in_days}'
+    support_ticket:
+      new_ticket_to_maintainer:
+        title: New ticket %{ticket_id} was created in %{category_name}
+        body: New ticket
+      new_ticket_maintainer_to_requester:
+        title: A new maintainer has been assigned to your ticket %{ticket_id}
+        body: New maintainer
+      marked_resolved:
+        title: Ticket %{ticket_id} was marked as resolved by requester.
+      resolved_by_maintainer_to_requester:
+        title: The maintainer %{maintainer_full_name} has marked your ticket %{ticket_id} as resolved.
+        body: Resolved
+      closed:
+        title: Ticket %{ticket_id} is now closed
+        body: 'Closed'
+      priority_changed:
+        title: 'New priority for ticket #%{ticket_id} was set'
+        body: 'New priority: %{new_priority}'
+    system_updates:
+      title: What’s new?
+      body: Brand new menu, ultra reliable Help Center, refreshed FAQ and many others!
+      first_time_secondary_text: '%{first_name}, let’s set up your space'
+      member:
+        booking:
+          title: Effortless booking
+          body: Book the favorite spot to work from or a conference room you like.
+          button_text: Try booking
+        events:
+          title: Phygital networking
+          body: Meet new people and expand your knowledge at the events.
+          button_text: Find events
+        news:
+          title: Relevant news
+          body: Have your finger on the pulse of your workspace.
+          button_text: Read news
+      company_admin:
+        booking:
+          title: Efficient real estate management
+          body: Manage your spaces and allocate them to your employees.
+          button_text: Try booking
+        events:
+          title: Workplace events
+          body: Manage and promote community events.
+          button_text: See your community
+        news:
+          title: Relevant news
+          body: Provide information about your workspace to the employees.
+          button_text: Read news
+      global_admin:
+        booking:
+          title: Efficient management
+          body: Create, advertise, and monetize spaces in the booking system.
+          button_text: Try booking
+        events:
+          title: Workplace community
+          body: Raise the profile of your workspace through an events portfolio.
+          button_text: See your community
+        news:
+          title: Relevant news
+          body: Have your finger on the pulse of your workspace.
+          button_text: Read news
+      staff:
+        ticketing:
+          title: Effortless system
+          body: Manage your workload and more reliably help your customers.
+          button_text: Try ticketing
+        faq:
+          title: Well-organized FAQs
+          body: Access building policies and stay informed about current service standards.
+          button_text: See FAQ’s
+        news:
+          title: Effective communication
+          body: Provide information about your workspace to your community.
+          button_text: Read news
+  invoicing:
+    pdf:
+      bank:
+        info: Bank info
+      description:
+        section: description
+      footer:
+        section: footer
+        prepayment: |
+          <em>Note</em>: This is a one-time charge to secure your booking and covers the balance of your first month's subscription.
+          Regular invoicing for the full month will start from the next billing date
+      header:
+        bill_from: bill from
+        bill_to: customer
+        due_date: Due date
+        invoice: invoice
+        period:
+          prefix: 'For:'
+          suffix: ''
+      line_items:
+        header:
+          gross_price: gross price
+          name: name
+          net_price: subtotal
+          quantity: qty
+          tax: tax
+          total_price: total price
+          unit_net_price: unit price
+        tax:
+          not_applicable: 'N/A'
+        types:
+          booking_points: Booking points
+          private_office: Private Office
+          fixed_desk_office: Fixed Desk
+          flex_desk_office: Flex Desk
+        summary:
+          gross_price: Gross
+          net_price: Net
+          total_price: Total
+          tax: Tax
+      system:
+        generated_by: Generated by
+      title:
+        prepayment: 'Prepayment '
+    receipt:
+      description: 'Invoice: %{invoice_number}'
+  mailers:
+    booking:
+      admin:
+        created:
+          subject: 'New meeting created: %{content}'
+          lead_copy: '%{booking_name} has been created'
+        updated:
+          subject: 'Meeting updated: %{content}'
+          lead_copy: '%{booking_name} has been updated'
+        canceled:
+          subject: 'Meeting canceled: %{content}'
+          lead_copy: '%{booking_name} has been canceled'
+      invitation_to_user:
+        subject: 'Invitation: %{content}'
+        lead_copy: You've been invited to %{booking_name}
+      invitation_to_guest:
+        subject: 'Invitation: %{content}'
+        lead_copy: You've been invited to %{booking_name}
+      updated_to_user:
+        subject: 'Updated: %{content}'
+        lead_copy: '%{booking_name} has been updated'
+      updated_to_guest:
+        subject: 'Updated: %{content}'
+        lead_copy: '%{booking_name} has been updated'
+      cancelled_to_user:
+        subject: 'Cancelled: %{content}'
+        lead_copy: '%{booking_name} has been cancelled'
+      cancelled_to_guest:
+        subject: 'Cancelled: %{content}'
+        lead_copy: '%{booking_name} has been cancelled'
+    cafe_orders:
+      report_new_orders:
+        company_name: Company name
+        creation_date: Creation date
+        excel_file_name: Report_new_orders.xlsx
+        last_cafe_orders: Recent e-commerce orders
+        order_items: Order items
+        order_item_name: Item name
+        order_item_no: No.
+        order_item_qty: Qty
+        order_item_unit_price: Unit Price
+        period: from %{period_start} to %{period_end}
+        spreadsheet_title: New orders
+        subject: New e-commerce orders
+        title: Information on new e-commerce orders within last %{days} days
+        total_cost: Total sum
+        total_tax: Tax
+        transaction_id: Trans. ID
+        user_name: Buyer
+    common:
+      autologin_url: Sign in automatically to this workplace
+      booking_creation_time: Creation time
+      booking_creator: Creator
+      booking_description: Description
+      booking_details: Booking details
+      booking_duration: Duration (h)
+      booking_end_date: End
+      booking_location: Location
+      booking_address: Address
+      booking_owner: Owner
+      booking_start_date: Start
+      booking_summary: Summary
+      company_code: Company code
+      company_name: Company name
+      contact_us: Contact us
+      conference_room_cost_per_hour: Meeting room CPH
+      conference_room_name: Meeting room name
+      creation_date: Creation date
+      credit_balance: Credit balance
+      date_and_time: Date & Time
+      download_app: 'Download the app:'
+      floor: Floor
+      free_hours_left: Free hrs left
+      free_hour_price: Free hr spent
+      greet: Hi %{first_name},
+      guest: Guest
+      host: Host
+      invitees: Invitees
+      last_room_bookings: Recent conference room bookings
+      month: Month
+      monthly_credits: Monthly credits
+      negotiated_price_explanation: Negotiated prices are allowed when booking is made by admin/concierge on behalf of a member.
+      negotiated_price_mode: Negotiated, non-standard price
+      note_from_host: 'Note from host:'
+      paid_hours: Paid hours
+      paid_with_free_hours: Paid with free hours!
+      points_left: Points left
+      points_price: Price in points
+      points_to_be_charged: Billable points
+      powered_by_spaceos: Powered by %{spaceos}
+      price_per_hour: Price per hour
+      qr_code_info: Use QR code to check in
+      room: Room
+      total_cost: Total sum
+      total_tax: Tax
+      total_time: Total time (in hrs)
+      transaction_id: Trans. ID
+      users_without_company: Users not assigned to company
+      user_name: Buyer
+      workplace_url: YOUR WORKPLACE URL
+    conference_room_bookings:
+      report_new_orders:
+        booking_details: Booking details
+        booking_duration: Duration (h)
+        booking_end_date: End
+        booking_location: Location
+        booking_start_date: Start
+        booking_summary: Summary
+        company_name: Company name
+        creation_date: Creation date
+        excel_file_name: Report_new_bookings.xlsx
+        free_hours_left: Free hrs left
+        free_hour_price: Free hr spent
+        last_room_bookings: Recent conference room bookings
+        negotiated_price_explanation: Negotiated prices are allowed when booking is made by admin/concierge on behalf of a member
+        negotiated_price_mode: Negotiated, non-standard price
+        paid_with_free_hours: Paid with free hours!
+        period: from %{period_start} to %{period_end}
+        points_left: Points left
+        points_price: Price in points
+        price_per_hour: Price per hour
+        spreadsheet_title: New bookings
+        subject: New conference room bookings
+        title: Information on new bookings within last %{days} days
+        total_cost: Total sum
+        total_tax: Tax
+        transaction_id: Trans. ID
+        user_name: Buyer
+    contact: 'Have a question? Contact us: '
+    contracts:
+      expiring_to_config_recipients:
+        company_name: Company name
+        contract_ends_date: Contract end date
+        csv_file_name: companies_with_expired_memberships.csv
+        days_remaining: "%{remaining_days} days remaining"
+        days_remaining_capt: Days to renewal
+        subject: Expiring membership agreements
+        title: Membership agreements renewing within %{days} days
+    directions: get directions in Google Maps
+    footer:
+      edit_copy: Edit your %{edit_url}
+      edit_url_copy: email settings
+      contact_us_at: Contact us at %{contact_email}
+    guests:
+      cancellation_to_guest:
+        lead_copy: Your invitation was canceled by the host
+        body_copy: Your host canceled the invitation to the meeting.
+        subject: Your invitation was cancelled
+        error_copy: Please contact the host if this is an error.
+      cancellation_to_host:
+        lead_copy_html: "Hi %{full_name},<br/>Your invitation has been cancelled by\\ \\ your host. \nPlease contact them if this is an error. "
+        subject: "Your guest's invitation was cancelled. "
+      guest_arrived_to_host:
+        body_copy: Your guest %{guest_full_name} just checked-in at the desk!
+        lead_copy: Hi %{host_full_name}
+        subject: Your guest %{guest_full_name} checked-in
+      invitation_to_guest:
+        body_copy: "%{host_full_name} is inviting you to the meeting"
+        ical_summary: "Meeting with %{host_full_name}"
+        lead_copy: You've been invited to a meeting
+        subject: You've got an invite
+      invitation_to_host:
+        body_copy_html: 'Location %{location}<br/>Date: %{arrival}<br/>Guests:<br/>'
+        lead_copy_html: "Hi %{full_name},<br/>Your guest's invitation has been sent.\\ \\ Please see details below. "
+        subject: We have invited your guests
+    hubspot_integration:
+      action_type: Action type
+      errors: Errors
+      object_name: Object name
+      object_type: Object type
+      subject: Error occurred during Hubspot Sync
+      title: Error occurred during Hubspot Sync
+    invoice:
+      pre_payment_to_user_plus:
+        body_copy: The pre-payment will be credited against the first rental fee due under the agreement.<br/><br/>A separate mail with next steps for access to the %{app_name} platform has also been sent.
+        lead_copy: Your pre-payment invoice is attached.
+        subject: Your pre-payment invoice from %{app_name}
+      billable_to_user_plus:
+        body_copy: You can find it attached below as a PDF document or archived on the platform in your company profile. If you have any questions, please contact support.
+        lead_copy: Your invoice for %{invoice_issue_date} has now been issued.
+        subject: Invoice for %{invoice_issue_date}
+      custom_to_user_plus:
+        body_copy: You can find it attached below as a PDF document or archived on the platform in your company profile. If you have any questions, please contact support.
+        lead_copy: You have a new invoice from %{app_name}
+        subject: You have a new invoice from %{app_name}
+      invoice_charges_paused_to_user_plus:
+        subject: "Charging has been paused for %{company_name}'s %{invoice_month}\\ \\ invoice."
+        body_copy: "Charging has been paused for invoice %{invoice_number} Charging\\ \\ for this invoice will take place on %{charges_resume_date}."
+        button_copy: "Contact support"
+        default_pause_charges_copy: a date to be agreed with your space administrator
+        lead_copy: "Hi %{user_first_name},"
+        summary_copy: Please contact the space administrator in case of any questions
+      invoice_charges_resumed_to_user_plus:
+        subject: "Charging has been requested for %{company_name}'s %{invoice_month}\\ \\ invoice."
+        body_copy: An immediate charge has been requested for invoice %{invoice_number}.
+        button_copy: Contact support
+        default_pause_charges_copy: a date to be agreed with your space administrator
+        lead_copy: "Hi %{user_first_name},"
+        summary_copy: "You can find it attached below as a PDF document or archived\\ \\ on the platform in your company profile. If you have any questions, please\\ \\ contact support."
+      invoice_list_item_row:
+        invoice_url_copy: 'View invoice'
+      upcoming_payment_to_user_plus:
+        subject: Your invoice due date reminder
+        reminder: "This is a reminder that in %{days_before_charge} days you will\\ \\ be charged an amount of %{currency} %{invoice_ballance} based on the invoice\\ \\ for %{invoice_month}."
+        contact_support: "If you have questions, please contact %{support_url}"
+    membership:
+      first_user_signed_to_user_plus:
+        lead_copy: "Hi %{user_first_name}!<br>Welcome to %{app_name}"
+        subject: Welcome to the community!
+      invoice_payment_failed_to_user_plus:
+        body_copy: Automatic payment for invoice %{invoice_number} failed. Please make sure the payment method is set up correctly. If you have any questions please contact our support.
+        button_copy: Contact Support
+        lead_copy: Hi %{user_first_name},
+        subject: Automatic payment for your %{invoice_issue_date} invoice failed.
+      user_plus_removed_user_to_user:
+        body_copy: We're sorry to see you go! Your account has been successfully deleted, if this was a mistake please contact one of our community managers.
+        lead_copy: "Your account has been deleted \U0001F61E"
+        subject: Your account has been deleted
+      user_plus_added_user_to_admin:
+        body_copy: "%{new_user_name} was added by %{user_plus_name} to %{company_name}."
+        lead_copy: A user has been added to %{company_name}
+        subject: A user has been added to %{company_name}
+        company_link_copy: Click here to view company detail page.
+      user_plus_removed_user_to_admin:
+        body_copy: "%{deleted_user_name} was removed by %{user_plus_name} from %{company_name}."
+        lead_copy: A user has been removed from %{company_name}
+        subject: A user has been removed from %{company_name}
+        company_link_copy: Click here to view company detail page.
+    membership_offer:
+      rejected_to_prospect:
+        body_copy: Please see below for further details regarding this matter.
+        lead_copy: unfortunately, we are presently unable to satisfy your specific request.
+        secondary_copy: If you have any questions, please contact our support team.<br>We’re here to help you!
+        subject: Update to your request at %{location}
+      sent_to_prospect:
+        body_copy: We've prepared a membership offer for you. If everything looks good please accept and sign the agreement. We're here to help if you have any questions!
+        button_copy: See offer
+        lead_copy: "Hi %{recipient_first_name}, <br>Your offer has been sent by %{app_name},\\ \\ please follow the link below to view. "
+        subject: "Here's an offer proposal for you from %{app_name}"
+      signed_and_user_created_to_admin:
+        body_copy: "%{user_full_name} from %{company_name} has signed their agreement.\\ \\ Please note user confirmation is still pending. </em>"
+        lead_copy: "%{company_name} has signed their agreement. <br><em>Please note\\ \\ user confirmation is still pending</em>."
+        subject: '%{company_name} has signed their agreement'
+      signed_and_user_created_to_user_plus:
+        body_copy: We're thrilled you've joined the %{app_name} community. Please follow the link below to begin setting up your account in our internal workspace system, %{app_name}
+        button_copy: Your %{app_name} Invitation
+        lead_copy: "Hello, %{user_first_name}. Thank you for signing your agreement."
+        subject: Your %{app_name} Invitation
+      signed_to_admin:
+        body_copy: 'Your offer has been accepted and the contract has been signed by %{user_full_name} from %{company_name}. Their subscription is now available in admin view. '
+        lead_copy: "%{user_full_name} from %{company_name} has signed their agreement."
+        subject: '%{member_plus_full_name} of %{company_name} has signed an agreement'
+      signed_to_prospect:
+        body_copy: It's great to have you on board! We hope that you'll love our workspace. To get started, simply create an account and complete the onboarding process.
+        button_copy: Create Account
+        lead_copy: "Hello, %{recipient_first_name}. Thank you for signing your agreement."
+        subject: We've received your signed agreement
+    membership_subscription:
+      expired_to_admin:
+        body_copy: "%{company_name}'s agreement has expired. Please contact the company\\ \\ to renew the subscription or prepare a new offer."
+        button_copy: Contact company
+        lead_copy: "Hello %{admin_first_name}"
+        mailto_subject: Subscription expired
+        subject: "%{company_name}'s agreement has expired"
+      expired_to_user:
+        body_copy: Your company's subscription with %{app_name} has expired. Please contact the %{app_name} team to renew your subscription.
+        button_copy: Contact support
+        lead_copy: "Hello %{user_first_name}"
+        subject: Your company's subscription has expired
+      full_access_granted_to_user_plus:
+        body_copy: You have now been granted full access to the %{app_name} platform, and see community news, fellow members, and be able to book meeting rooms. <br/><br/> If you have already downloaded the mobile app, please make sure to close and reopen, or sign out and sign back in again to gain full access. <br/><br/> In case you have not yet downloaded the app, links to the app for iOS and Android can be found below. Once installed, simply log in with the same credentials you used when creating your account.
+        lead_copy: Thank you for returning your signed agreement.
+        subject: Full access to %{app_name} granted
+      invoicing_paused_to_admin:
+        body_copy: "%{company_name}'s subscription invoicing has been paused by %{by_user_name}"
+        button_copy: Contact company
+        lead_copy: Hi %{admin_first_name}
+        mailto_subject: Subscription invoicing paused
+        subject: "%{company_name}'s subscription invoicing has been paused"
+      invoicing_paused_to_user_plus:
+        body_copy: Your subscription invoicing has been paused. If you wish to resume it, please contact the support team.
+        button_copy: Contact support
+        lead_copy: Hi %{user_first_name}
+        subject: Your subscription invoicing has been paused
+      invoicing_resumed_to_admin:
+        body_copy: "%{company_name}'s subscription invoicing has been resumed by %{by_user_name}"
+        button_copy: Contact company
+        lead_copy: Hi %{admin_first_name}
+        mailto_subject: Subscription invoicing resumed
+        subject: "%{company_name}'s subscription invoicing has been resumed"
+      invoicing_resumed_to_user_plus:
+        body_copy: Your subscription invoicing has been resumed. Please contact the %{app_name} team via the link below with any questions.
+        button_copy: Contact support
+        lead_copy: Hi %{user_first_name}
+        subject: Your subscription invoicing has been resumed
+      near_end_to_admin:
+        body_copy: "%{company_name}'s subscription will expire soon. Please contact\\ \\ the company to renew the subscription or prepare a new offer."
+        button_copy: Contact company
+        lead_copy: Hi %{admin_first_name}
+        mailto_subject: Subscription close to expiry
+        subject: "%{company_name}'s subscription is about to expire"
+      near_end_to_user_plus:
+        body_copy: We hope you want to stay with us! Please contact support to renew your subscription or ask for a new offer.
+        button_copy: Contact support
+        lead_copy: "Hi %{user_first_name},<br>your subscription will expire soon"
+        subject: Your subscription is about to expire
+      signup_reminder_to_company:
+        body_copy: "Thanks again for signing your %{app_name} agreement. In order\\ \\ to complete your company's onboarding process, please press the link below\\ \\ to get started."
+        button_copy: Create account
+        lead_copy: "Hi %{user_first_name}!"
+        subject: 'Reminder: please create your %{app_name} account'
+      subscription_charges_paused_to_user_plus:
+        subject: "Charges have been paused for %{company_name}'s subscription"
+        body_copy: Charges have been paused for present and future invoices related to your subscription. Charges will resume on %{charges_resume_date}.
+        default_pause_charges_copy: a date to be agreed with your space administrator
+        lead_copy: "Hi %{user_first_name},"
+        summary_copy: Please contact the space administrator in case of any questions
+        button_copy: "Contact support"
+      subscription_charges_resumed_to_user_plus:
+        body_copy: Automatic charges have resumed for future invoices as per the normal billing cycle for your subscription. Past due invoices (if any) will be charged separately.
+        button_copy: Contact support
+        default_pause_charges_copy: a date to be agreed with your space administrator
+        lead_copy: "Hi %{user_first_name},"
+        subject: "Automatic charges have resumed for %{company_name}'s subscription "
+        summary_copy: Please contact the space administrator in case of any questions
+      updated_to_user_plus:
+        body_copy: To view the changes just click on the button below. If you have any questions please contact support.
+        button_copy: View changes
+        lead_copy: "Hello %{user_first_name},<br>Your subscription has been modified.\\ \\ Please follow the link below to review changes. "
+        subject: Your subscription has been modified
+      first_auto_renewal_notification_to_user_plus:
+        subject: Your %{app_name} subscription will auto-renew in %{days} days.
+        lead_copy: "Hi %{first_name},"
+        body_copy: "Just to let you know that your subscription at %{app_name} will\\ \\ auto-renew on %{auto_renewal_date}. Please note that if you wish to cancel\\ \\ your auto-renewal subscription, you must do so before %{cut_off_date}\\ \\ or you will be charged for an additional subscription period."
+        secondary_copy: To request a cancellation of your auto-renewal, please click below
+        button_copy: Contact the company
+        mailto_subject: 'Subscription cancelation question'
+      second_auto_renewal_notification_to_user_plus:
+        subject: "Reminder: Your %{app_name} subscription will auto-renew in %{days}\\ \\ days."
+        lead_copy: "Hi %{first_name},"
+        body_copy: "Just a quick reminder that your subscription at %{app_name} will\\ \\ auto-renew on %{auto_renewal_date}. Please note that if you wish to cancel\\ \\ your auto-renewal subscription, you must do so before %{cut_off_date}\\ \\ or you will be charged for an additional subscription period."
+        secondary_copy: "To request a cancellation of your auto-renewal, please click\\ \\ below"
+        button_copy: Contact the company
+        mailto_subject: 'Subscription cancelation question'
+      auto_renewal_canceled_to_user_plus:
+        subject: "Your %{app_name} subscription auto-renewal has been successfully\\ \\ canceled"
+        lead_copy: "Hi %{first_name}"
+        body_copy: "We have successfully processed your auto-renewal cancellation\\ \\ request. As per the conditions of your plan, you will continue to have\\ \\ full access until %{end_date}. After this date, you will no longer be\\ \\ able to access the space, but you will still have access to your app to\\ \\ check on the last remaining charges associated with your account."
+        secondary_copy: "Please contact us at %{contact_email} with any questions.\\ \\ Thank you for being a part of our community!"
+        button_copy: Contact support
+        mailto_subject: Question about cancellation of automatic subscription renewal
+      subscription_auto_renewed_to_user_plus:
+        subject: Your %{app_name} subscription has auto-renewed
+        lead_copy: "Hi %{first_name}"
+        body_copy: "Your subscription at %{app_name} has successfully renewed for\\ \\ an additional %{auto_renewal_period}. To see more information about your\\ \\ subscription status, please click below."
+        button_copy: View the company details
+        mailto_subject: 'Question about automatic subscription renewal'
+    monthly_community_report:
+      excel_file_name: Monthly_community_report.xlsx
+      monthly_totals: Monthly totals
+      on_behalf_of: "%{creator_name} on behalf of"
+      spreadsheet_title: Community report
+      subject: Monthly community report
+      title: Monthly community report
+    microsoft_sso:
+      global_admin_disabled_sso_to_company_admin:
+        subject: Global admin has disabled the SSO
+        lead_copy: Global admin has disabled the SSO
+        body_copy: Your global admin has disabled the SSO for the app. If you want to keep that feature for your company, contact your global admin.
+    new_merchant:
+      export_shop_orders:
+        body_copy: Please find the list of orders in the attached CSV file.
+        csv_file_name: shop_orders.csv
+        excel_file_name: shop_orders.xlsx
+        lead_copy: List of orders in CSV format
+        subject: List of orders
+      export_shop_products:
+        body_copy: Please find the list of products in the attached CSV file.
+        csv_file_name: shop_products.csv
+        lead_copy: List of products in CSV format
+        subject: List of products
+      greet_to_user:
+        body_copy: 'Welcome on board! With our system you can sell your goods to employees from %{page_title}. First, download the app:'
+        if_you_already: Already have the app? Time for the next step!
+        in_order_to_set_password: You need to set your password. Use the button below on the device you have your Merchant app installed.
+        lead_copy: "%{shop_name} is ready to set up!"
+        subject: Welcome to merchant application
+      update_shop_email_to_merchant:
+        body_copy: 'Welcome on board! With our system you can sell your goods to employees from %{page_title}. First, download the app:'
+        if_you_already: Already have the app? Time for the next step!
+        in_order_to_set_password: You need to set your password. Use the button below on the device you have your Merchant app installed.
+        lead_copy: "%{shop_name} is ready to set up!"
+        subject: Welcome to merchant application
+    onboarding:
+      autologin_to_any_user:
+        subject: Your requested sign in link was successfully generated
+        body_copy: Remember that this link is a one-time token and will expire in %{expires_in}, so don't wait too long to use it.
+      invitation_to_any_user:
+        subject: "%{invited_by_first_name} has invited you to join %{app_name} workplace"
+        header_text: Join your %{app_name} workplace
+        invited_by_text: "%{invited_by_full_name} (%{invited_by_email}) has invited\\ \\ you to use your team's workplace."
+        signed_up_coworkers: '%{invited_by_first_name} and 100 more of your coworkers have signed up'
+        button_copy: Join now
+      invitation_to_first_company_admin:
+        subject: "%{invited_by_first_name} has invited you to launch %{app_name} workplace"
+        header_text: Launch your %{app_name} workplace
+        invited_by_text: "%{invited_by_full_name} (%{invited_by_email}) has invited\\ \\ you to set up your team's workplace."
+        trusted_by: 'Trusted by tens of thousands of professionals around the world'
+        button_copy: Set up your workplace
+      welcome_to_member:
+        subject: Welcome to %{app_name} workplace!
+        header_text: Welcome to your %{app_name} workplace
+        congratulations: Congratulations on successfully creating your profile. See how spaceOS helps improve your workplace experience.
+        booking:
+          lead_copy: Effortless booking
+          body_copy: Book the favorite spot to work from or a conference room you like.
+          button_copy: Try booking
+        community:
+          lead_copy: Phygital networking
+          body_copy: Meet new people and expand your knowledge at the events.
+          button_copy: See your community
+        news:
+          lead_copy: Relevant news
+          body_copy: Have your finger on the pulse of your workspace.
+          button_copy: Read news
+        download_mobile_app: Download our mobile app
+        shape_your_workspace: Shape your workspace and access your favorite features on the go with a touch.
+      welcome_to_company_admin:
+        subject: Welcome to %{app_name} workplace!
+        header_text: Welcome to your %{app_name} workplace
+        congratulations: Congratulations on successfully creating your profile. See how spaceOS helps improve your workplace experience.
+        booking:
+          lead_copy: Efficient real estate management
+          body_copy: Manage your spaces and allocate them to your employees.
+          button_copy: Try booking
+        community:
+          lead_copy: Workplace events
+          body_copy: Manage and promote community events.
+          button_copy: See your community
+        news:
+          lead_copy: Relevant news
+          body_copy: Provide information about your workspace to the employees.
+          button_copy: Read news
+        download_mobile_app: Download our mobile app
+        shape_your_workspace: Shape your workspace and access your favorite features on the go with a touch.
+      welcome_to_global_admin:
+        subject: Welcome to %{app_name} workplace!
+        header_text: Welcome to your %{app_name} workplace
+        congratulations: Congratulations on successfully creating your profile. See how spaceOS helps improve your workplace experience.
+        booking:
+          lead_copy: Efficient management
+          body_copy: Create, advertise, and monetize spaces in the booking system.
+          button_copy: Try booking
+        community:
+          lead_copy: Workplace community
+          body_copy: Raise the profile of your workspace through an events portfolio.
+          button_copy: See your community
+        news:
+          lead_copy: Effective communication
+          body_copy: Provide information about your workspace to your community.
+          button_copy: Read news
+        download_mobile_app: Download our mobile app
+        shape_your_workspace: Shape your workspace and access your favorite features on the go with a touch.
+      welcome_to_staff:
+        subject: Welcome to %{app_name} workplace!
+        header_text: Welcome to your %{app_name} workplace
+        congratulations: Congratulations on successfully creating your profile. See how spaceOS helps improve your workplace experience.
+        tickets:
+          body_copy: Access building policies, keep up with current service standards.
+          lead_copy: Ticketing system
+          button_copy: See ticketing
+        faq:
+          body_copy: Manage your workload and more reliably help your customers.
+          lead_copy: FAQs
+          button_copy: See FAQs
+        news:
+          lead_copy: Relevant news
+          body_copy: Have your finger on the pulse of your workspace.
+          button_copy: Read news
+        download_mobile_app: Download our mobile app
+        shape_your_workspace: Shape your workspace and access your favorite features on the go with a touch.
+      verification_to_any_user:
+        subject: Email verification is needed to join %{app_name}
+        lead_copy: Verify your email to join %{app_name} workplace
+        button_copy: Verify your email and join the workplace
+        body_copy: This link will expire in %{expires_in} for security purposes. Please verify your email asap.
+    password:
+      greet:
+        button_copy: Get Started
+        info: With %{app_name}, you can reserve time in shared spaces, RSVP to events and manage service preferences.
+        lead_copy: Welcome to %{app_name}!
+        subject: Welcome to %{app_name}!
+        welcome: ' %{app_name} - your essential companion to navigating the space, the community, and all the services available to you. The OS works on any desktop browser, and also as a mobile app on both iOS and Android.'
+      greet_self_registered:
+        body_copy_html: It's great to have you on board! We hope that you'll love our workspace.<br/>To get started, follow the link and confirm your account.
+        button_copy: 'Confirm Account'
+        lead_copy_html: "Hi, %{first_name},<br/>your confirmation link is here \U0001F447"
+        subject: Confirm Account
+      greet_with_agreements:
+        attachments_instructions: |+
+          <em><strong>Please note</strong></em>: In order to have full access to the %{app_name} platform, you must first sign the attached agreement and return it to the welcome desk. Once your agreement has been received, the %{app_name} will be fully functional.
+      reset:
+        button_copy: Set password
+        error: If you didn't request the reset, don't worry — your password is still safe. Feel free to delete this email.
+        info: 'We received your request to reset your password in %{app_name}. We''re here to help. Simply click below to set a new password:'
+        subject: Reset your password
+    payment:
+      company: 'Company:'
+      event: 'Event:'
+      failure:
+        lead_copy: Booking payment issue
+        problem_with_payment: 'There is a problem with your payment that needs attention:'
+        subject: Booking payment failure - %{company_name}
+      reason: 'Reason:'
+      when: 'When:'
+    sent_by: Sent by
+    points_configurations:
+      admin_notification:
+        subject: Updates required to your booking currency settings
+        content: "Some additional updates are required to your booking points configurations.\\ \\ Please proceed to Admin->Inventory->Booking Points and<br/><ul>"
+        currencies_instruction: "<li>add the points-to-currency conversion for the\\ \\ following currencies:<br/>%{currencies}</li>"
+        locales_instruction: <li>provide the singular and\ \ plural names you would like to assign to booking points for the following\ \ languages:<br/>%{locales} etc...</li>
+        note: "</ul>Note: If no conversion is provided, the default setting of 1 unit\\ \\ of the primary currency = 1 booking point will be applied. "
+        body: '%{body}'
+    signup:
+      notify_admin_another_person_signed_up:
+        body_copy_html: We've noticed %{user_full_name} from %{company_name} signed up via access card, that was previously used by %{unassigned_user_full_name} from %{unassigned_user_company}. Since only one person can be assigned to the card, %{unassigned_user_full_name} lost access to our space.
+        lead_copy_html: Hi %{admin_first_name},<br>%{unassigned_user_full_name}'s card changed ownership
+        subject: Card is overridden
+      notify_member_plus_another_person_signed_up:
+        body_copy_html: We've noticed %{user_full_name} from %{company_name} signed up via access card, that was previously used by %{unassigned_user_full_name} from your company. Since only one person can be assigned to the card, %{unassigned_user_full_name} lost access to our space. If you have any questions, please contact us.
+        button_copy: Contact Us
+        lead_copy_html: Hi %{member_plus_first_name}, one of your team member's card changed ownership
+        subject: Card is overridden
+      notify_member_plus_no_free_seats_left_for_user:
+        body_copy: Hi %{admin_first_name}, we've noticed %{email_used_for_signup} tried to join your company using the invitation link, but there are no more spots left. Your invitation link has been disabled.
+        lead_copy: Someone from your company couldn't sign up due to the lack of spots.
+        subject: Someone from your company couldn't sign up
+      notify_user_another_person_signed_up:
+        body_copy_html: We've noticed %{user_full_name} from %{company_name} signed up via access card, that was previously used by you. Since only one person can be assigned to the card, you lost access to our space.
+        button_copy: Contact Us
+        contact_company_subject: Card is overridden
+        lead_copy_html: Hi %{unassigned_user_first_name},<br>%{user_full_name} has signed up with your access card. Your account has been deactivated.
+        subject: Card is overridden
+    survey:
+      send_survey:
+        action_button: Go to survey
+    support_ticket:
+      new_ticket_to_maintainer:
+        subject: 'New support ticket #%{ticket_id} was raised'
+        lead_copy: There is a new '%{category_name}' request by %{requester_full_name}
+        button_text: View Ticket
+      new_ticket_to_requester:
+        subject: "You've raised a new support ticket #%{ticket_id}"
+        lead_copy: Your ticket will be assigned to a Maintainer shortly
+        button_text: Open Chat
+      ticket_closed_to_requester:
+        subject: "Your support ticket #%{ticket_id} is now permanently closed and\\ \\ can't be reopen"
+        lead_copy: There is always room for improvement. Show us how to do it!
+        button_text: Rate your experience
+      rating_reminder_to_requester:
+        subject: "You still can rate our service for support ticket #%{ticket_id}"
+        lead_copy: We want to do better. Could you help us with that?
+        button_text: Rate your experience
+      ticket_assigned_to_maintainer:
+        subject: "Ticket #%{ticket_id} was assigned to you."
+        lead_copy: "%{assigned_by_full_name} assigned you this ticket"
+        button_text: View Ticket
+      ticket_unassigned_to_maintainer:
+        subject: "Support ticket #%{ticket_id} is no longer assigned to you."
+        lead_copy: "%{unassigned_by_full_name} removed you from this ticket."
+        button_text: View Ticket
+      new_ticket_reminder_to_maintainer:
+        subject: "Support ticket #%{ticket_id} has not been picked up."
+        lead_copy: "Please review the ticket and start working on it as soon as possible."
+        button_text: View Ticket
+      ticket_modified_to_requester:
+        subject: "Your support ticket #%{ticket_id} was modified"
+        lead_copy: '%{modified_by_full_name} made changes to this support ticket'
+        button_text: Open Chat
+      ticket_modified_to_maintainer:
+        subject: "Support ticket #%{ticket_id} was modified"
+        lead_copy: '%{modified_by_full_name} made changes to this support ticket'
+        button_text: View Ticket
+      ticket_resolved_to_requester:
+        subject: "Support ticket #%{ticket_id} was marked as resolved"
+        lead_copy: '%{resolver_full_name} marked your ticket as resolved'
+        button_text: Open Chat
+      ticket_resolved_to_maintainer:
+        subject: "Support ticket #%{ticket_id} was marked as resolved"
+        lead_copy: '%{resolver_full_name} marked this ticket as resolved'
+        button_text: View Ticket
+    support_ticket_category:
+      new_ticket_category_to_admin:
+        subject: "'%{category_name}' was added to support ticket categories"
+        lead_copy: Your tenants can now report issues in this new category
+        edit_ticket_category: Edit Ticket Category
+      delete_ticket_category_to_admin:
+        subject: "'%{category_name}' was deleted from the support ticket categories"
+        lead_copy: All tickets were transfered to the General category
+        button_text: 'View Categories'
+      ticket_category_modified_to_admin:
+        subject: "'%{category_name}' support ticket category was modified"
+        lead_copy: '%{modified_by_full_name} made changes to the support ticket category'
+        button_text: View Categories
+    support_ticket_message:
+      new_ticket_message_to_requester:
+        subject: "There is a new message for your support ticket #%{support_ticket_id}"
+        lead_copy: '%{author_full_name} has left you one new message'
+        button_text: Open Chat
+      new_ticket_message_to_maintainer:
+        subject: "New message for support ticket #%{support_ticket_id}"
+        lead_copy: '%{author_full_name} has left you one new message'
+        button_text: Open Chat
+    tennant_orders_report:
+      report_new_orders:
+        excel_file_name: Report_new_orders.xlsx
+        spreadsheet_title: New orders
+        subject: New conference room bookings and e-commerce orders
+        title: Information on new bookings and e-commerce orders made within last %{days} days
+    visibility:
+      hide:
+        body_copy_html: We would like to let you know that your company <b>%{company_name}</b> has turned off visibility in <b>%{cowork_name}</b>. For this reason, your visibility has also been turned off.
+        subject: Your profile visibility has been set to hidden
+        user_regards_html: Best regards,<br/>%{cowork_name}
+      show:
+        body_copy_html: Your company <b>%{company_name}</b> has restored the visibility in <b>%{cowork_name}</b>. You can now keep your profile invisible for others in the community or not. To change that just go to your profile settings and check the <i>Visibility mode</i> box.
+        subject: Your company's profile visibility has been set to visible
+        user_regards_html: Best regards,<br/>%{cowork_name}
+    post_event:
+      attendee_invite:
+        subject: You are going to %{post_event_name}
+        body_copy: To check in at this event, please use the QR code below.
+        lead_copy: Hi %{first_name}, <br> You signed up for %{post_event_name}.
+      cancel_timeslot:
+        subject: '%{post_event_name} is now cancelled'
+        lead_copy: '%{post_event_name} is cancelled.'
+      rsvp_to_user:
+        subject: You are invited to %{post_event_name}
+        lead_copy: Hi %{first_name}, <br> %{invited_by_name} invited you to %{post_event_name}
+        body_copy_html: To accept the invitation, please use the link below.
+        action_button: Accept Invitation
+      rsvp_to_guest:
+        subject: You are invited to %{post_event_name}
+        lead_copy: Hi %{first_name}, <br> %{invited_by_name} invited you to %{post_event_name}
+        body_copy_html: To accept the invitation, please use the link below.
+        action_button: Accept Invitation
+      cancel_joining:
+        subject: '%{post_event_name} is now canceled'
+        lead_copy: Hi %{first_name}, <br> "%{post_event_name}" is canceled
+      reminder:
+        subject: "Your reminder about %{post_event_name}"
+        lead_copy: Hi %{first_name}, you have an upcoming event %{post_event_name}
+        push_title: "You have an upcoming event: %{post_event_name}"
+      event_changed:
+        subject: '%{post_event_name} was updated'
+        lead_copy: 'Hi %{first_name}, <br> %{post_event_name} was updated'
+        event_details: Event Details
+        hosts: Hosts
+  membership:
+    history:
+      details:
+        invoice:
+          state:
+            changed: "%{previous_state} -> %{new_state}"
+      invoice:
+        auto:
+          created: Draft invoice created
+          issued: Invoice issued and available for review
+        email:
+          to_user_plus: Email with invoice sent to the customer
+        imported: The invoice imported from an external system
+        manual:
+          issued: Draft (Custom Invoice)
+        marked_payment_unprocessable: The invoice will not be processed
+        overdue:
+          reminded: Customer reminded
+        paused_charges: Charges Paused
+        payment:
+          failed: Payment failed
+          not_defined: Payment method not defined
+          pending: Payment pending
+          succeeded: Paid
+        payment_tries:
+          reset: Reset payment counter
+        paypal:
+          cancelled: The invoice was cancelled in PayPal
+          created: The invoice was created in PayPal
+          failed: Error occurred while creating or sending the invoice in PayPal
+          sent: The invoice was sent to the customer by PayPal
+        requested_charge: Charge requested
+        resumed_charges: Charges Resumed
+        state:
+          changed: Status change
+          overdue: Waiting for payment
+          voided: Void
+      reason:
+        invoice:
+          auto:
+            created: Automatically created by system
+            issued: Automatically issued by system
+          email:
+            to_user_plus: Automatically sent by system
+          manual:
+            issued: Issued by _user.name_
+          marked_payment_unprocessable: Usually, imported and past invoices are not being processed. Payment processing will not start, even for issued or due invoices of such type.
+          overdue:
+            reminded: spaceOS sent email to customer reminding about payment
+          paused_charges: Charging has been paused for this invoice. No charge will be made for this invoice as charging is set to paused.
+          payment:
+            failed: Sent by system
+            not_defined: Automatically set by system
+            pending: Sent by system
+            succeeded: Automatically collected by system
+          payment_tries:
+            reset: spaceOS will try to charge again
+          paypal:
+            cancelled: Usually, when the invoice was marked as void or as paid, spaceOS requests PayPal to cancel invoice processing.
+            created: The invoice is in PayPal, but not yet sent to the customer.
+            failed: Contact Customer Support for more information.
+            sent: PayPal notifies the customer about the invoice via email or other means of contact.
+          requested_charge: A request has been sent to the payment provider to immediately charge for this invoice.
+          resumed_charges: Charging has been resumed for this invoice. This invoice will be charged at the next applicable charge date.
+          state:
+            changed: Changed by _user.name_
+            overdue: Automatically set by system
+            voided: Changed by _user.name_
+        subscription:
+          activated: Subscription activated by _user.name_
+          auto_renewed: The subscription contract had been renewed for the next time period.
+          cancelled_auto_renewal: Contract now expires on the fixed date displayed in the subscription details.
+          changed:
+            billing_end_date: Expiration date changed
+            billing_intervals: Contract lenght changed
+            billing_start_date: Contract start date changed
+            currency: Currency changed
+            description: Description changed
+            file_uuids: A new document has been uploaded
+            invoice_footer: Invoice footer changed
+            invoice_note: Invoice note changed
+            length_interval: Contract period length changed
+            length_intervals: Contract period number changed
+            location_id: Location changed
+            name: Name changed
+            product_added: A new product has been added to this subscription
+            product_deleted: A product has been removed from this subscription
+            product_updated: A product has been updated this subscription
+          completed: All onboarding data provided by user
+          deactivated: Subscription deactivated
+          paused: Subscription paused by _user.name_
+          paused_charges: Automatic charges have been paused for this subscription.
+          resumed: Subscription resumed by _user.name_
+          resumed_charges: Automatic charges have been resumed for this subscription.
+          signed: Contract signed
+      subscription:
+        activated: Subscription activated
+        auto_renewed: Subscription auto renewed
+        cancelled_auto_renewal: Auto renewal subscription cancelled
+        changed:
+          billing_end_date: Expiration date changed
+          billing_intervals: Contract lenght changed
+          billing_start_date: Contract start date changed
+          currency: Currency changed
+          description: Description changed
+          file_uuids: A new document has been uploaded
+          invoice_footer: Invoice footer changed
+          invoice_note: Invoice note changed
+          length_interval: Contract period length changed
+          length_intervals: Contract period number changed
+          location_id: Location changed
+          name: Name changed
+          product_added: Product added
+          product_deleted: Product removed
+          product_updated: Product updated
+        completed: Onboarding completed
+        deactivated: Subscription Deactivated
+        imported: The subscription imported from an external system.
+        paused: Paused
+        paused_charges: Charges paused
+        resumed: Resumed
+        resumed_charges: Charges resumed
+        signed: Signed by %{user_name}
+  payments:
+    methods_not_supported: 'Please use an array consisting of only supported payment methods: [%{allowed_methods}].'
+    shared_to_all_credit_card:
+      custom_text: 'Select me for the purchase'
+  support_tickets:
+    greeting_auto_message: '<b>Auto message</b>: Thank you for bringing this issue to our attention. Our support staff will soon open the ticket and do their best to resolve it. <br> In the meantime, feel free to add any extra information here, such as the description of the issue and relevant photos.'
+    history:
+      status_change: '<b>%{user_name}</b> changed the status to <b>%{status}</b>.'
+      status_change_to_pending: Your ticket status changed to pending because the maintainer has asked for some additional information.
+      status_change_to_hold: Your ticket has been placed on hold while the maintainer is requesting help regarding the issue from a third-party provider.
+      status_change_to_resolved_by_maintainer: The maintainer has successfully resolved your ticket and changed its status to solved. <br> It will automatically close in 2 days. In case the issue persists, use this chat to talk to the maintainer.
+      status_change_to_close: Your ticket is now closed.
+      priority_change: 'Your ticket priority changed to %{priority}.'
+      new_maintainer_added: '<b>%{user_name}</b> add a new maintainer - %{maintainer_name}'
