@@ -7,3 +7,10 @@ en-US-REV:
     reminders:
       btn_cancel_booking: Скасувати бронювання
       btn_nevermind: Зберігати бронювання
+      cancel_this_booking: Скасувати це бронювання?
+      email:
+        subject: Нагадування про бронювання
+      friendly_reminder: Це доброзичливе нагадування про ваше найближче бронювання
+      msg_booking_already_cancelled: Це бронювання вже скасовано
+      not_found: Такого бронювання не знайдено
+      not_gonna_make_it: Не зроблю цього?
