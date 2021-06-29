@@ -1,1 +1,9 @@
 ---
+en-US-REV:
+  booking:
+    payment:
+      description: Замовлення на конференції відредаговано
+  bookings:
+    reminders:
+      btn_cancel_booking: Скасувати бронювання
+      btn_nevermind: Зберігати бронювання
