@@ -1,5 +1,3 @@
 files:
-  - source: /*.json
-    translation: /%locale%/%original_file_name%
-  - source: /*.yml
+  - source: /test.json
     translation: /%locale%/%original_file_name%
