@@ -1,3 +1,4 @@
 files:
   - source: /*json
     translation: /translations/%two_letters_code%_%original_file_name%
+    update_option": update_as_unapproved
