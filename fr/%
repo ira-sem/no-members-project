@@ -15,7 +15,7 @@ context_1</context>
       </trans-unit>
       <trans-unit id="3199407" resname="2" size-unit="char" maxwidth="21">
         <source>Text for translation 2</source>
-        <target state="needs-translation">Text for translation 2</target>
+        <target state="translated">Traduction 2</target>
         <context-group purpose="information">
           <context context-type="source">2
 Context_2</context>
