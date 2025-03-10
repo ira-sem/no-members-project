@@ -4,3 +4,5 @@ files:
     multilingual: 1
     first_line_contains_header: 1
     scheme: 'identifier,source_phrase,none,none,fr,de'
+  - source: /*.json
+    translation: /%two_letters_code%/%original_file_name%
