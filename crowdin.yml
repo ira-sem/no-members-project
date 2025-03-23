@@ -2,4 +2,4 @@ files:
   - source: '*.xlsx'
     translation: /translated/%two_letters_code%-%original_file_name%
     first_line_contains_header: 1
-    scheme: 'identifier,source_phrase,none,none,no,de'
+    scheme: 'identifier,source_or_translation'
